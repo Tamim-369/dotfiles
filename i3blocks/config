@@ -35,7 +35,7 @@ markup=pango
 
 
 [corner-both]
-command=echo "<span size='14pt' ></span>"
+command=echo "<span size='14pt' > </span>"
 color=#92c0fc
 interval=2
 separator_block_width=0
@@ -104,13 +104,10 @@ separator_block_width=0
 
 
 [corner-2]
-command=echo "<span size='14pt' > </span>"
+command=echo "<span size='14pt' ></span>"
 color=#92c0fc
 interval=2
 separator_block_width=0
-
-
-
 
 
 
