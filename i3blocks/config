@@ -34,19 +34,38 @@ markup=pango
 
 
 
+[corner-both]
+command=echo "<span size='14pt' ></span>"
+color=#92c0fc
+interval=2
+separator_block_width=0
+
+[battery]
+command=echo "<span><span size='14pt' > 󰂄 </span><span rise='1pt'>$(cat /sys/class/power_supply/BAT0/capacity)%</span> </span>"
+interval=5
+markup=pango
+color=#92c0fc
+
+
+
+
+
+
 [corner-1]
 command=echo "<span size='13pt' ></span>"
 color=#92c0fc
 interval=2
 separator_block_width=0
 
-[disk]
-command= echo "<span foreground='#92c0fc' background='#1b1f26' size='x-large'></span><span background='#92c0fc'> <span foreground='#1b1f26' size='14pt' rise='2pt'>  </span><span foreground='#1b1f26' size='13pt' rise='2pt'></span><span size='10pt' rise='3pt'>$(df -h | grep "/$" | awk '{print $5}')</span>  </span><span background='#92c0fc' foreground='#1b1f26' size='x-large'></span>"
+[time]
+command=echo "<span foreground='#1b1f26' background='#92c0fc' size='x-large'></span><span background='#92c0fc'> <span foreground='#1b1f26' size='14pt'> </span><span size='10pt' rise='2pt'>$(date +"%H:%M:%S")</span> </span><span background='#92c0fc' foreground='#1b1f26' size='x-large'></span>"
 markup=pango
-background=#81A1C1
+background=#92c0fc
 color=#1b1f26
-interval=30
+interval=1
 separator_block_width=0
+
+
 
 
 [corner-2]
@@ -75,13 +94,12 @@ color=#92c0fc
 interval=2
 separator_block_width=0
 
-
-[time]
-command=echo "<span foreground='#1b1f26' background='#92c0fc' size='x-large'></span><span background='#92c0fc'> <span foreground='#1b1f26' size='14pt'> </span><span size='10pt' rise='2pt'>$(date +"%H:%M:%S")</span> </span><span background='#92c0fc' foreground='#1b1f26' size='x-large'></span>"
+[disk]
+command= echo "<span foreground='#92c0fc' background='#1b1f26' size='x-large'></span><span background='#92c0fc'> <span foreground='#1b1f26' size='14pt' rise='2pt'>  </span><span foreground='#1b1f26' size='13pt' rise='2pt'></span><span size='10pt' rise='3pt'>$(df -h | grep "/$" | awk '{print $5}')</span>  </span><span background='#92c0fc' foreground='#1b1f26' size='x-large'></span>"
 markup=pango
-background=#92c0fc
+background=#81A1C1
 color=#1b1f26
-interval=1
+interval=30
 separator_block_width=0
 
 
@@ -93,24 +111,6 @@ separator_block_width=0
 
 
 
-
-
-[battery]
-command=echo "<span><span size='14pt' > 󰂄 </span><span rise='1pt'>$(cat /sys/class/power_supply/BAT0/capacity)%</span> </span>"
-interval=5
-markup=pango
-color=#92c0fc
-background=#1b1f26
-
-
-
-
-
-[corner-both]
-command=echo "<span size='14pt' ></span>"
-color=#92c0fc
-interval=2
-separator_block_width=0
 
 
 
