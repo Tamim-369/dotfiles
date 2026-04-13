@@ -18,10 +18,10 @@ border-color: rgba(67, 76, 94, 100%);                /* #434C5E - subtle border 
 foreground: rgba(216, 222, 233, 100%);               /* #D8DEE9 - soft white */
 normal-foreground: @foreground;
 alternate-normal-foreground: @foreground;
-lightfg: rgb(64, 186, 169);                   /* #5E81AC - blue accent */
+lightfg: rgba(146, 192, 252, 1);                   /* #5E81AC - blue accent */
 
 /* -------------------- Selected -------------------- */
-selected-normal-background: rgb(64, 186, 169);  /* #5E81AC */
+selected-normal-background: rgba(146, 192, 252, 1);  /* #5E81AC */
 selected-normal-foreground: rgba(236, 239, 244, 100%); /* #ECEFF4 */
 
 /* -------------------- Active -------------------- */

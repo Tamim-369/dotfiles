@@ -31,57 +31,88 @@ separator_block_width=0  # Adjust to make it look neat
 separator=false
 markup=pango
 
+
+
+
+[corner-1]
+command=echo "<span size='13pt' ></span>"
+color=#92c0fc
+interval=2
+separator_block_width=0
+
 [disk]
-command= echo "<span foreground='#5e81ac' background='#1b1f26' size='x-large'></span><span background='#5e81ac'> <span foreground='#D8DEE9' size='large'>  </span> <span foreground='#D8DEE9' size='small' rise='2pt'>/</span> <span size='small' rise='2pt'>$(df -h | grep "/$" | awk '{print $5}')</span>  </span><span background='#5e81ac' foreground='#1b1f26' size='x-large'></span>"
+command= echo "<span foreground='#92c0fc' background='#1b1f26' size='x-large'></span><span background='#92c0fc'> <span foreground='#1b1f26' size='14pt' rise='2pt'>  </span><span foreground='#1b1f26' size='13pt' rise='2pt'></span><span size='10pt' rise='3pt'>$(df -h | grep "/$" | awk '{print $5}')</span>  </span><span background='#92c0fc' foreground='#1b1f26' size='x-large'></span>"
 markup=pango
 background=#81A1C1
-color=#D8DEE9
+color=#1b1f26
 interval=30
+separator_block_width=0
 
-[volume-pulseaudio]
-command=$HOME/.config/i3blocks/scripts/volume-pulseaudio
-markup=pango
-interval=1
 
-[memory]
-command=$HOME/.config/i3blocks/scripts/memory
-label=<span foreground='#88c0d0' background='#1b1f26' size='x-large'> </span><span background='#88c0d0'> <span foreground='#1b1f26' size='large'></span> </span>
-background=#88c0d0
-color=#434c5e
-markup=pango
+[corner-2]
+command=echo "<span size='14pt' > </span>"
+color=#92c0fc
 interval=2
-min_width=memor
+separator_block_width=0
 
-[cpu_usage]
-command=$HOME/.config/i3blocks/scripts/cpu_usage
-interval=1
-LABEL=<span foreground='#81A1C1' size='large'>﬙</span> 
-markup=pango
-min_width=cpucp
-DECIMALS=0
 
-[nm-vpn]
-command=$HOME/.config/i3blocks/scripts/nm-vpn
-markup=pango
-background=#81a1c1
-interval=5
+
+
 
 [date]
-command=echo "<span foreground='#81A1C1' size='large'></span> <span size='small' rise='2pt'>$(date +"%Y-%m-%d")</span>"; if [ $button ]; then orage -t; fi
+command=echo "<span foreground='#92c0fc' size='14pt'></span> <span size='10pt' rise='1pt' > $(date +"%Y-%m-%d") </span>"; if [ $button ]; then orage -t; fi
 markup=pango
+color=#92c0fc
 interval=1
+separator_block_width=0
+
+
+
+
+[corner-1]
+command=echo "<span size='14pt' ></span>"
+color=#92c0fc
+interval=2
+separator_block_width=0
 
 
 [time]
-command=echo "<span foreground='#1b1f26' background='#5e81ac' size='x-large'></span><span background='#5e81ac'> <span foreground='#D8DEE9' size='large'> </span> <span size='small' rise='2pt'>$(date +"%H:%M:%S")</span> </span><span background='#5e81ac' foreground='#1b1f26' size='x-large'></span>"
+command=echo "<span foreground='#1b1f26' background='#92c0fc' size='x-large'></span><span background='#92c0fc'> <span foreground='#1b1f26' size='14pt'> </span><span size='10pt' rise='2pt'>$(date +"%H:%M:%S")</span> </span><span background='#92c0fc' foreground='#1b1f26' size='x-large'></span>"
 markup=pango
-background=#5e81ac
-color=#D8DEE9
+background=#92c0fc
+color=#1b1f26
 interval=1
+separator_block_width=0
+
+
+[corner-2]
+command=echo "<span size='14pt' ></span>"
+color=#92c0fc
+interval=2
+separator_block_width=0
+
+
+
+
 
 [battery]
-command=echo "🔋$(cat /sys/class/power_supply/BAT0/capacity)%"
+command=echo "<span><span size='14pt' > 󰂄 </span><span rise='1pt'>$(cat /sys/class/power_supply/BAT0/capacity)%</span> </span>"
 interval=5
 markup=pango
-color=#9ab5df
+color=#92c0fc
+background=#1b1f26
+
+
+
+
+
+[corner-both]
+command=echo "<span size='14pt' ></span>"
+color=#92c0fc
+interval=2
+separator_block_width=0
+
+
+
+
 
