@@ -1,0 +1,51 @@
+[[keyboard.bindings]]
+action = "Paste"
+key = "V"
+mods = "Control|Shift"
+
+[terminal.shell]
+program = "/usr/bin/fish"
+args = ["--login"]          
+
+[[keyboard.bindings]]
+action = "Copy"
+key = "C"
+mods = "Control|Shift"
+
+
+[colors.primary]
+background = "0x000000"   # true black
+foreground = "0xE6E6E6"   # soft white (readable, not pure white)
+
+[env]
+COLORTERM = "truecolor"
+
+[font]
+size = 14
+
+[font.normal]
+family = "JetBrainsMono Nerd Font"
+style = "Regular"
+
+[font.bold]
+family = "JetBrainsMono Nerd Font"
+style = "Bold"
+
+[font.italic]
+family = "JetBrainsMono Nerd Font"
+style = "Italic"
+
+
+[scrolling]
+history = 10000
+multiplier = 3
+
+[window]
+dynamic_title = true
+opacity = 0.80
+
+[window.padding]
+x = 5
+y = 5
+
+[keyboard]

@@ -1,0 +1,109 @@
+"$schema" = 'https://starship.rs/config-schema.json'
+
+palette = "custom"
+
+format = """
+[](core_bg)\
+[ ](bg:core_bg fg:text_dark)\
+[](bg:core_blue fg:core_bg)\
+$directory\
+[](fg:core_blue bg:core_mid)\
+$git_branch\
+$git_status\
+[](fg:core_mid bg:core_dark)\
+$nodejs\
+$bun\
+$rust\
+$golang\
+$php\
+[](fg:core_dark bg:core_darker)\
+$time\
+[ ](fg:core_darker)\
+$character\
+"""
+
+# ─────────────────────────────
+# DIRECTORY
+# ─────────────────────────────
+[directory]
+style = "fg:text_light bg:core_blue"
+format = "[ $path ]($style)"
+truncation_length = 3
+truncation_symbol = "…/"
+
+[directory.substitutions]
+"Documents" = "󰈙 "
+"Downloads" = " "
+"Music" = " "
+"Pictures" = " "
+
+# ─────────────────────────────
+# GIT
+# ─────────────────────────────
+[git_branch]
+symbol = ""
+style = "bg:core_mid"
+format = "[ $symbol $branch ](fg:core_blue bg:core_mid)"
+
+[git_status]
+style = "bg:core_mid"
+format = "[($all_status$ahead_behind )](fg:core_blue bg:core_mid)"
+
+# ─────────────────────────────
+# LANGUAGES (all unified)
+# ─────────────────────────────
+[nodejs]
+symbol = ""
+style = "bg:core_dark"
+format = "[ $symbol ($version) ](fg:core_blue bg:core_dark)"
+
+[bun]
+symbol = ""
+style = "bg:core_dark"
+format = "[ $symbol ($version) ](fg:core_blue bg:core_dark)"
+
+[rust]
+symbol = ""
+style = "bg:core_dark"
+format = "[ $symbol ($version) ](fg:core_blue bg:core_dark)"
+
+[golang]
+symbol = ""
+style = "bg:core_dark"
+format = "[ $symbol ($version) ](fg:core_blue bg:core_dark)"
+
+[php]
+symbol = ""
+style = "bg:core_dark"
+format = "[ $symbol ($version) ](fg:core_blue bg:core_dark)"
+
+# ─────────────────────────────
+# TIME
+# ─────────────────────────────
+
+# ─────────────────────────────
+# PROMPT
+# ─────────────────────────────
+[line_break]
+disabled = true
+[character]
+disabled = false
+success_symbol = "[❯](fg:core_blue)"
+error_symbol = "[❯](fg:core_mid)"
+
+# ─────────────────────────────
+# PALETTE (THE ONLY PLACE COLORS LIVE)
+# ─────────────────────────────
+[palettes.custom]
+
+# Core structure (your theme backbone)
+core_bg     = "#394260"
+core_blue   = "#92c0fc"
+core_mid    = "#394260"
+core_dark   = "#212736"
+core_darker = "#1d2230"
+
+# Text
+text_dark   = "#92c0fc"
+text_light  = "#212736"
+text_soft   = "#a0a9cb"

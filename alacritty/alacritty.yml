@@ -1,0 +1,35 @@
+# ~/.config/alacritty/alacritty.yml
+
+# Font configuration
+font:
+  normal:
+    family: FiraCode Nerd Font
+    style: Regular
+  size: 14.0
+
+# Colors
+colors:
+  primary:
+    background: "#1d2029"
+    foreground: "#cdd6f4"
+
+# Use true color
+env:
+  COLORTERM: truecolor
+
+# Window
+window:
+  padding:
+    x: 5
+    y: 5
+  dynamic_title: true
+
+# Scrolling
+scrolling:
+  history: 10000
+  multiplier: 3
+
+# Key bindings
+key_bindings:
+  - { key: V, mods: Control|Shift, action: Paste }
+  - { key: C, mods: Control|Shift, action: Copy }
