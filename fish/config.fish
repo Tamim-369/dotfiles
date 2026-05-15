@@ -33,6 +33,7 @@ alias clean_junk="~/scripts/cleaner.sh"
 alias requestly="~/Applications/Requestly-1.6.0.AppImage"
 alias conda="~/anaconda3/bin/conda"
 alias ls="eza --icons --color=always"
+alias inside="eza --tree"
 alias anaconda-navigator="/home/tamim/anaconda3/bin/anaconda-navigator"
 # string match -q "$TERM_PROGRAM" "kiro" and . (kiro --locate-shell-integration-path fish)
 

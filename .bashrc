@@ -96,6 +96,7 @@ alias finder='ranger'
 alias qdrant='~/Tools/Qdrant/release/qdrant'
 alias warp-cli="echo 'fuck off'"
 alias vim='nvim'
+alias inside='eza --tree"'
 alias cls='clear'
 alias cat='batcat'
 alias clean_junk='~/scripts/cleaner.sh'
@@ -187,3 +188,13 @@ export PATH="$HOME/.local/bin:$PATH"
 
 # Added by Hugging Face CLI installer
 export PATH="/home/tamim/.local/bin:$PATH"
+
+# opencode
+export PATH=/home/tamim/.opencode/bin:$PATH
+
+#Go
+export PATH=$PATH:/usr/local/go/bin
+
+#llama.cpp
+export LD_LIBRARY_PATH=$HOME/llama.cpp/build/src:$LD_LIBRARY_PATH
+
