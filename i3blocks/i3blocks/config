@@ -1,0 +1,69 @@
+# i3blocks config file
+
+# Please see man i3blocks for a complete reference!
+
+# Global properties
+
+command=$SCRIPT_DIR/$BLOCK_NAME
+separator_block_width=0
+separator=false
+markup=pango
+
+[corner-both]
+command=echo "<span size='14pt' > </span>"
+color=#3eead0
+interval=2
+separator_block_width=0
+
+[battery]
+command=echo "<span><span size='14pt' > 󰂄 </span><span rise='1pt'>$(cat /sys/class/power_supply/BAT0/capacity)%</span> </span>"
+interval=5
+markup=pango
+color=#3eead0
+
+[corner-1]
+command=echo "<span size='13pt' ></span>"
+color=#279d8b
+interval=2
+separator_block_width=0
+
+[time]
+command=echo "<span foreground='#eef0f4' background='#279d8b' size='x-large'></span><span background='#279d8b'> <span foreground='#eef0f4' size='14pt'> </span><span size='10pt' rise='2pt'>$(date +"%H:%M:%S")</span> </span><span background='#279d8b' foreground='#eef0f4' size='x-large'></span>"
+markup=pango
+background=#279d8b
+color=#eef0f4
+interval=1
+separator_block_width=0
+
+[corner-2]
+command=echo "<span size='14pt' > </span>"
+color=#279d8b
+interval=2
+separator_block_width=0
+
+[date]
+command=echo "<span foreground='#3eead0' size='14pt'></span> <span size='10pt' rise='1pt' > $(date +"%Y-%m-%d") </span>"; if [ $button ]; then orage -t; fi
+markup=pango
+color=#3eead0
+interval=1
+separator_block_width=0
+
+[corner-1]
+command=echo "<span size='14pt' ></span>"
+color=#279d8b
+interval=2
+separator_block_width=0
+
+[disk]
+command=echo "<span foreground='#eef0f4' background='#279d8b' size='x-large'></span><span background='#279d8b'> <span foreground='#eef0f4' size='14pt' rise='2pt'>  </span><span foreground='#eef0f4' size='13pt' rise='2pt'></span><span size='10pt' rise='3pt'>$(df -h | grep "/$" | awk '{print $5}')</span>  </span><span background='#279d8b' foreground='#eef0f4' size='x-large'></span>"
+markup=pango
+background=#279d8b
+color=#eef0f4
+interval=30
+separator_block_width=0
+
+[corner-2]
+command=echo "<span size='14pt' ></span>"
+color=#279d8b
+interval=2
+separator_block_width=0
