@@ -101,6 +101,9 @@ alias cls='clear'
 alias cat='batcat'
 alias clean_junk='~/scripts/cleaner.sh'
 alias requestly='~/Applications/Requestly-1.6.0.AppImage'
+alias n8n_stop='docker compose -f ./n8n/compose.yml down'
+alias n8n_upgrade='curl -fsSL https://get.n8n.io | sh -s -- --upgrade'
+alias n8n_uninstall='docker compose -f ./n8n/compose.yml down -v && rm -rf ./n8n'
 # Alias definitions.
 # You may want to put all your additions into a separate file like
 # ~/.bash_aliases, instead of adding them here directly.
@@ -198,3 +201,11 @@ export PATH=$PATH:/usr/local/go/bin
 #llama.cpp
 export LD_LIBRARY_PATH=$HOME/llama.cpp/build/src:$LD_LIBRARY_PATH
 
+
+# pnpm
+export PNPM_HOME="/home/tamim/.local/share/pnpm"
+case ":$PATH:" in
+  *":$PNPM_HOME/bin:"*) ;;
+  *) export PATH="$PNPM_HOME/bin:$PATH" ;;
+esac
+# pnpm end

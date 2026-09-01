@@ -216,50 +216,36 @@ bindsym $mod+r mode "resize"
 # finds out, if available)
 
 bar {
-    status_command SCRIPT_DIR=~/.config/i3blocks/scripts i3blocks
-    position bottom
-    font pango:JetBrainsMono Nerd Font 10
+status_command SCRIPT_DIR=~/.config/i3blocks/scripts i3blocks
+position bottom
+font pango:JetBrainsMono Nerd Font 10
 
-#    colors {
-#        background        #1b1f26
-#        statusline        #D8DEE9
-#        separator         #5eac99
-#
-#        focused_workspace  #256e64 #1b1f26 #d8dee9
-#        active_workspace   #1b1f26 #1b1f26 #D8DEE9
-#        inactive_workspace #1b1f26 #1b1f26 #8495b7
-#        urgent_workspace   #BF616A #BF616A #ECEFF4
-#    }
-     colors {
-        background        #16191d
-        statusline        #D8DEE9
-        separator         #8FBCBB
+colors {
+    background        #16191D
+    statusline        #D8DEE9
+    separator         #39C6B0
 
-        focused_workspace  #81A1C1 #1b1f26 #ECEFF4
-        active_workspace   #88C0D0 #1b1f26 #ECEFF4
-        inactive_workspace #1b1f26 #1b1f26 #4C566A
-        urgent_workspace   #BF616A #BF616A #ECEFF4
-        binding_mode       #D08770 #1b1f26 #ECEFF4
-    }
+    focused_workspace  #267F76 #1B1F26 #ECEFF4
+    active_workspace   #39C6B0 #1B1F26 #ECEFF4
+    inactive_workspace #1B1F26 #1B1F26 #59677E
+    urgent_workspace   #BF616A #BF616A #ECEFF4
+    binding_mode       #D08770 #1B1F26 #ECEFF4
 }
 
+}
 
 default_border pixel 1
-#new_window pixel 1
 new_float pixel 1
+
 gaps inner 3
 gaps outer 2
 
-# Background
-client.background        #1b1f26
+client.background        #1B1F26
 
-# Window border and titlebar colors
-# Format: <class> <border> <background> <text> <indicator> <child_border>
-client.focused          #81A1C1 #1b1f26 #ECEFF4 #88C0D0 #81A1C1
-client.focused_inactive #2E3440 #1b1f26 #59677e #434C5E #2E3440
-client.unfocused        #1b1f26 #1b1f26 #59677e #2E3440 #1b1f26
+client.focused          #39C6B0 #1B1F26 #ECEFF4 #39C6B0 #39C6B0
+client.focused_inactive #267F76 #1B1F26 #8FA8A5 #267F76 #267F76
+client.unfocused        #1B1F26 #1B1F26 #59677E #267F76 #1B1F26
 client.urgent           #BF616A #BF616A #ECEFF4 #BF616A #BF616A
-
 
 
 
@@ -268,7 +254,7 @@ client.urgent           #BF616A #BF616A #ECEFF4 #BF616A #BF616A
 
 
 exec_always --no-startup-id "bash -c ./enable_tap_to_click.sh"
-exec_always --no-startup-id "feh --bg-scale ~/Pictures/walpaper_nord.jpg"
+exec_always --no-startup-id "feh --bg-scale ~/Pictures/walpaper.png"
 
 exec_always --no-startup-id xss-lock -- i3lock -n
 exec_always --no-startup-id "redshift -P -O 3900"
@@ -277,7 +263,6 @@ exec_always --no-startup-id "xgamma -gamma 1.2"
 exec --no-startup-id /home/tamim/.config/i3/enable_tap_to_click.sh
 exec_always --no-startup-id "xrdb -merge ~/.Xresources"
 exec_always --no-startup-id parcellite
-exec --no-startup-id ~/scripts/dart_reminder.sh
 
 exec_always --no-startup-id killall conky; conky -c ~/.config/conky/conky.conf
 

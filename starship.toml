@@ -96,14 +96,12 @@ error_symbol = "[❯](fg:core_mid)"
 # ─────────────────────────────
 [palettes.custom]
 
-# Core structure (your theme backbone)
-core_bg     = "#394260"
-core_blue   = "#92c0fc"
-core_mid    = "#394260"
-core_dark   = "#212736"
-core_darker = "#1d2230"
+core_bg     = "#16383A"
+core_blue   = "#39C6B0"
+core_mid    = "#245052"
+core_dark   = "#172B2D"
+core_darker = "#102124"
 
-# Text
-text_dark   = "#92c0fc"
-text_light  = "#212736"
-text_soft   = "#a0a9cb"
+text_dark   = "#39C6B0"
+text_light  = "#D4E3E2"
+text_soft   = "#9BB5B3"

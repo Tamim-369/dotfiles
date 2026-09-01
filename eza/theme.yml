@@ -1,0 +1,624 @@
+colourful: true
+
+filekinds:
+  normal:
+    foreground: "#A8B8C0"
+  directory:
+    foreground: "#39C6B0"
+  symlink:
+    foreground: "#52C9C0"
+  pipe:
+    foreground: "#B5A66A"
+  block_device:
+    foreground: "#B5A66A"
+  char_device:
+    foreground: "#B5A66A"
+  socket:
+    foreground: "#C49BE0"
+  special:
+    foreground: "#C76D75"
+  executable:
+    foreground: "#55B9A5"
+  mount_point:
+    foreground: "#39C6B0"
+
+perms:
+  user_read:
+    foreground: "#718784"
+  user_write:
+    foreground: "#B5A66A"
+  user_execute_file:
+    foreground: "#55B9A5"
+  user_execute_other:
+    foreground: "#55B9A5"
+  group_read:
+    foreground: "#718784"
+  group_write:
+    foreground: "#B5A66A"
+  group_execute:
+    foreground: "#55B9A5"
+  other_read:
+    foreground: "#718784"
+  other_write:
+    foreground: "#B5A66A"
+  other_execute:
+    foreground: "#55B9A5"
+  special_user_file:
+    foreground: "#C76D75"
+  special_other:
+    foreground: "#C76D75"
+  attribute:
+    foreground: "#59677E"
+
+size:
+  major:
+    foreground: "#39C6B0"
+  minor:
+    foreground: "#52C9C0"
+  number_byte:
+    foreground: "#A8B8C0"
+  number_kilo:
+    foreground: "#94AAA9"
+  number_mega:
+    foreground: "#7FC8C0"
+  number_giga:
+    foreground: "#52C9C0"
+  number_huge:
+    foreground: "#39C6B0"
+  unit_byte:
+    foreground: "#59677E"
+  unit_kilo:
+    foreground: "#59677E"
+  unit_mega:
+    foreground: "#59677E"
+  unit_giga:
+    foreground: "#59677E"
+  unit_huge:
+    foreground: "#59677E"
+
+users:
+  user_you:
+    foreground: "#39C6B0"
+  user_root:
+    foreground: "#C76D75"
+  user_other:
+    foreground: "#718784"
+  group_yours:
+    foreground: "#52C9C0"
+  group_other:
+    foreground: "#718784"
+  group_root:
+    foreground: "#C76D75"
+
+links:
+  normal:
+    foreground: "#52C9C0"
+  multi_link_file:
+    foreground: "#7FC8C0"
+
+git:
+  new:
+    foreground: "#55B9A5"
+  modified:
+    foreground: "#B5A66A"
+  deleted:
+    foreground: "#C76D75"
+  renamed:
+    foreground: "#52C9C0"
+  ignored:
+    foreground: "#59677E"
+  conflicted:
+    foreground: "#D96C75"
+
+git_repo:
+  branch_main:
+    foreground: "#39C6B0"
+  branch_other:
+    foreground: "#52C9C0"
+  git_clean:
+    foreground: "#55B9A5"
+  git_dirty:
+    foreground: "#B5A66A"
+
+security_context:
+  none:
+    foreground: "#59677E"
+  selinux:
+    colon:
+      foreground: "#59677E"
+    user:
+      foreground: "#718784"
+    role:
+      foreground: "#718784"
+    typ:
+      foreground: "#718784"
+    range:
+      foreground: "#718784"
+
+file_type:
+  image:
+    foreground: "#B89BD9"
+  video:
+    foreground: "#A98FD0"
+  music:
+    foreground: "#C49BE0"
+  crypto:
+    foreground: "#55B9A5"
+  document:
+    foreground: "#9BAEB0"
+  compressed:
+    foreground: "#D0B96A"
+  temp:
+    foreground: "#59677E"
+    is_dimmed: true
+  compiled:
+    foreground: "#C99E5A"
+  build:
+    foreground: "#D0B96A"
+  source:
+    foreground: "#7FC8C0"
+
+punctuation:
+  foreground: "#59677E"
+
+date:
+  foreground: "#718784"
+
+inode:
+  foreground: "#59677E"
+
+blocks:
+  foreground: "#59677E"
+
+header:
+  foreground: "#39C6B0"
+  is_bold: true
+
+octal:
+  foreground: "#718784"
+
+flags:
+  foreground: "#59677E"
+
+control_char:
+  foreground: "#C76D75"
+
+broken_symlink:
+  foreground: "#D96C75"
+
+broken_path_overlay:
+  foreground: "#C76D75"
+
+filenames:
+  Dockerfile:
+    filename:
+      foreground: "#7FC8C0"
+
+  Makefile:
+    filename:
+      foreground: "#D0B96A"
+
+  CMakeLists.txt:
+    filename:
+      foreground: "#D0B96A"
+
+  Cargo.toml:
+    filename:
+      foreground: "#D0B96A"
+
+  Cargo.lock:
+    filename:
+      foreground: "#D0B96A"
+
+  package.json:
+    filename:
+      foreground: "#D0B96A"
+
+  package-lock.json:
+    filename:
+      foreground: "#D0B96A"
+
+  yarn.lock:
+    filename:
+      foreground: "#D0B96A"
+
+  pnpm-lock.yaml:
+    filename:
+      foreground: "#D0B96A"
+
+  README:
+    filename:
+      foreground: "#9BAEB0"
+
+  README.md:
+    filename:
+      foreground: "#9BAEB0"
+
+  LICENSE:
+    filename:
+      foreground: "#9BAEB0"
+
+  .gitignore:
+    filename:
+      foreground: "#718784"
+
+  .gitattributes:
+    filename:
+      foreground: "#718784"
+
+  .env:
+    filename:
+      foreground: "#C49BE0"
+
+  .env.local:
+    filename:
+      foreground: "#C49BE0"
+
+extensions:
+  py:
+    filename:
+      foreground: "#7FC8C0"
+  pyw:
+    filename:
+      foreground: "#7FC8C0"
+  pyc:
+    filename:
+      foreground: "#C99E5A"
+
+  js:
+    filename:
+      foreground: "#D0B96A"
+  jsx:
+    filename:
+      foreground: "#D0B96A"
+  mjs:
+    filename:
+      foreground: "#D0B96A"
+  cjs:
+    filename:
+      foreground: "#D0B96A"
+
+  ts:
+    filename:
+      foreground: "#52C9C0"
+  tsx:
+    filename:
+      foreground: "#52C9C0"
+  mts:
+    filename:
+      foreground: "#52C9C0"
+  cts:
+    filename:
+      foreground: "#52C9C0"
+
+  html:
+    filename:
+      foreground: "#D99A68"
+  htm:
+    filename:
+      foreground: "#D99A68"
+  xhtml:
+    filename:
+      foreground: "#D99A68"
+
+  css:
+    filename:
+      foreground: "#7FC8C0"
+  scss:
+    filename:
+      foreground: "#C49BE0"
+  sass:
+    filename:
+      foreground: "#C49BE0"
+  less:
+    filename:
+      foreground: "#7FC8C0"
+
+  json:
+    filename:
+      foreground: "#9BAEB0"
+  jsonc:
+    filename:
+      foreground: "#9BAEB0"
+  yaml:
+    filename:
+      foreground: "#9BAEB0"
+  yml:
+    filename:
+      foreground: "#9BAEB0"
+  toml:
+    filename:
+      foreground: "#9BAEB0"
+  xml:
+    filename:
+      foreground: "#D99A68"
+
+  md:
+    filename:
+      foreground: "#9BAEB0"
+  markdown:
+    filename:
+      foreground: "#9BAEB0"
+  txt:
+    filename:
+      foreground: "#A8B8C0"
+  log:
+    filename:
+      foreground: "#596F6C"
+
+  c:
+    filename:
+      foreground: "#7FC8C0"
+  h:
+    filename:
+      foreground: "#7FC8C0"
+  cc:
+    filename:
+      foreground: "#7FC8C0"
+  cpp:
+    filename:
+      foreground: "#7FC8C0"
+  cxx:
+    filename:
+      foreground: "#7FC8C0"
+  hpp:
+    filename:
+      foreground: "#7FC8C0"
+  hxx:
+    filename:
+      foreground: "#7FC8C0"
+
+  rs:
+    filename:
+      foreground: "#D98A5B"
+
+  go:
+    filename:
+      foreground: "#52C9C0"
+
+  java:
+    filename:
+      foreground: "#D99A68"
+  kt:
+    filename:
+      foreground: "#C49BE0"
+  kts:
+    filename:
+      foreground: "#C49BE0"
+
+  swift:
+    filename:
+      foreground: "#D98A5B"
+
+  dart:
+    filename:
+      foreground: "#52C9C0"
+
+  lua:
+    filename:
+      foreground: "#7F9FC8"
+
+  php:
+    filename:
+      foreground: "#A89BD9"
+
+  rb:
+    filename:
+      foreground: "#C76D75"
+
+  r:
+    filename:
+      foreground: "#7F9FC8"
+
+  sql:
+    filename:
+      foreground: "#D0B96A"
+
+  sh:
+    filename:
+      foreground: "#55B9A5"
+  bash:
+    filename:
+      foreground: "#55B9A5"
+  zsh:
+    filename:
+      foreground: "#55B9A5"
+  fish:
+    filename:
+      foreground: "#52C9C0"
+
+  ps1:
+    filename:
+      foreground: "#7F9FC8"
+  bat:
+    filename:
+      foreground: "#7FC8C0"
+  cmd:
+    filename:
+      foreground: "#7FC8C0"
+
+  png:
+    filename:
+      foreground: "#B89BD9"
+  jpg:
+    filename:
+      foreground: "#B89BD9"
+  jpeg:
+    filename:
+      foreground: "#B89BD9"
+  webp:
+    filename:
+      foreground: "#B89BD9"
+  gif:
+    filename:
+      foreground: "#B89BD9"
+  svg:
+    filename:
+      foreground: "#B89BD9"
+  bmp:
+    filename:
+      foreground: "#B89BD9"
+  ico:
+    filename:
+      foreground: "#B89BD9"
+  tiff:
+    filename:
+      foreground: "#B89BD9"
+  tif:
+    filename:
+      foreground: "#B89BD9"
+  avif:
+    filename:
+      foreground: "#B89BD9"
+
+  mp4:
+    filename:
+      foreground: "#A98FD0"
+  mkv:
+    filename:
+      foreground: "#A98FD0"
+  webm:
+    filename:
+      foreground: "#A98FD0"
+  mov:
+    filename:
+      foreground: "#A98FD0"
+  avi:
+    filename:
+      foreground: "#A98FD0"
+  m4v:
+    filename:
+      foreground: "#A98FD0"
+
+  mp3:
+    filename:
+      foreground: "#C49BE0"
+  wav:
+    filename:
+      foreground: "#C49BE0"
+  flac:
+    filename:
+      foreground: "#C49BE0"
+  ogg:
+    filename:
+      foreground: "#C49BE0"
+  m4a:
+    filename:
+      foreground: "#C49BE0"
+
+  zip:
+    filename:
+      foreground: "#D0B96A"
+  tar:
+    filename:
+      foreground: "#D0B96A"
+  gz:
+    filename:
+      foreground: "#D0B96A"
+  bz2:
+    filename:
+      foreground: "#D0B96A"
+  xz:
+    filename:
+      foreground: "#D0B96A"
+  7z:
+    filename:
+      foreground: "#D0B96A"
+  rar:
+    filename:
+      foreground: "#D0B96A"
+  zst:
+    filename:
+      foreground: "#D0B96A"
+
+  pdf:
+    filename:
+      foreground: "#D98282"
+  doc:
+    filename:
+      foreground: "#6FA8C9"
+  docx:
+    filename:
+      foreground: "#6FA8C9"
+  odt:
+    filename:
+      foreground: "#6FA8C9"
+
+  xls:
+    filename:
+      foreground: "#6FB98A"
+  xlsx:
+    filename:
+      foreground: "#6FB98A"
+  csv:
+    filename:
+      foreground: "#6FB98A"
+  ods:
+    filename:
+      foreground: "#6FB98A"
+
+  ppt:
+    filename:
+      foreground: "#D98A5B"
+  pptx:
+    filename:
+      foreground: "#D98A5B"
+  odp:
+    filename:
+      foreground: "#D98A5B"
+
+  key:
+    filename:
+      foreground: "#55B9A5"
+  pem:
+    filename:
+      foreground: "#55B9A5"
+  crt:
+    filename:
+      foreground: "#55B9A5"
+  cert:
+    filename:
+      foreground: "#55B9A5"
+
+  db:
+    filename:
+      foreground: "#A89BD9"
+  sqlite:
+    filename:
+      foreground: "#A89BD9"
+  sqlite3:
+    filename:
+      foreground: "#A89BD9"
+
+  wasm:
+    filename:
+      foreground: "#C99E5A"
+  o:
+    filename:
+      foreground: "#C99E5A"
+  so:
+    filename:
+      foreground: "#C99E5A"
+  dll:
+    filename:
+      foreground: "#C99E5A"
+  exe:
+    filename:
+      foreground: "#55B9A5"
+  bin:
+    filename:
+      foreground: "#C99E5A"
+
+  lock:
+    filename:
+      foreground: "#596F6C"
+
+  tmp:
+    filename:
+      foreground: "#596F6C"
+  temp:
+    filename:
+      foreground: "#596F6C"
+  bak:
+    filename:
+      foreground: "#596F6C"

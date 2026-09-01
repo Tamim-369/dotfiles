@@ -1,42 +1,17 @@
 # i3blocks config file
-#
+
 # Please see man i3blocks for a complete reference!
-# The man page is also hosted at http://vivien.github.io/i3blocks
-#
-# List of valid properties:
-#
-# align
-# color
-# command
-# full_text
-# instance
-# interval
-# label
-# min_width
-# name
-# separator
-# separator_block_width
-# short_text
-# signal
-# urgent
 
 # Global properties
-#
-# The top properties below are applied to every block, but can be overridden.
-# Each block command defaults to the script name to avoid boilerplate.
-# Change $SCRIPT_DIR to the location of your scripts!
-# Global properties
+
 command=$SCRIPT_DIR/$BLOCK_NAME
-separator_block_width=0  # Adjust to make it look neat
+separator_block_width=0
 separator=false
 markup=pango
 
-
-
-
 [corner-both]
 command=echo "<span size='14pt' > </span>"
-color=#92c0fc
+color=#39C6B0
 interval=2
 separator_block_width=0
 
@@ -44,72 +19,51 @@ separator_block_width=0
 command=echo "<span><span size='14pt' > 󰂄 </span><span rise='1pt'>$(cat /sys/class/power_supply/BAT0/capacity)%</span> </span>"
 interval=5
 markup=pango
-color=#92c0fc
-
-
-
-
-
+color=#39C6B0
 
 [corner-1]
 command=echo "<span size='13pt' ></span>"
-color=#92c0fc
+color=#39C6B0
 interval=2
 separator_block_width=0
 
 [time]
-command=echo "<span foreground='#1b1f26' background='#92c0fc' size='x-large'></span><span background='#92c0fc'> <span foreground='#1b1f26' size='14pt'> </span><span size='10pt' rise='2pt'>$(date +"%H:%M:%S")</span> </span><span background='#92c0fc' foreground='#1b1f26' size='x-large'></span>"
+command=echo "<span foreground='#1b1f26' background='#39C6B0' size='x-large'></span><span background='#39C6B0'> <span foreground='#1b1f26' size='14pt'> </span><span size='10pt' rise='2pt'>$(date +"%H:%M:%S")</span> </span><span background='#39C6B0' foreground='#1b1f26' size='x-large'></span>"
 markup=pango
-background=#92c0fc
+background=#39C6B0
 color=#1b1f26
 interval=1
 separator_block_width=0
 
-
-
-
 [corner-2]
 command=echo "<span size='14pt' > </span>"
-color=#92c0fc
+color=#39C6B0
 interval=2
 separator_block_width=0
 
-
-
-
-
 [date]
-command=echo "<span foreground='#92c0fc' size='14pt'></span> <span size='10pt' rise='1pt' > $(date +"%Y-%m-%d") </span>"; if [ $button ]; then orage -t; fi
+command=echo "<span foreground='#39C6B0' size='14pt'></span> <span size='10pt' rise='1pt' > $(date +"%Y-%m-%d") </span>"; if [ $button ]; then orage -t; fi
 markup=pango
-color=#92c0fc
+color=#39C6B0
 interval=1
 separator_block_width=0
 
-
-
-
 [corner-1]
 command=echo "<span size='14pt' ></span>"
-color=#92c0fc
+color=#39C6B0
 interval=2
 separator_block_width=0
 
 [disk]
-command= echo "<span foreground='#92c0fc' background='#1b1f26' size='x-large'></span><span background='#92c0fc'> <span foreground='#1b1f26' size='14pt' rise='2pt'>  </span><span foreground='#1b1f26' size='13pt' rise='2pt'></span><span size='10pt' rise='3pt'>$(df -h | grep "/$" | awk '{print $5}')</span>  </span><span background='#92c0fc' foreground='#1b1f26' size='x-large'></span>"
+command=echo "<span foreground='#1b1f26' background='#39C6B0' size='x-large'></span><span background='#39C6B0'> <span foreground='#1b1f26' size='14pt' rise='2pt'>  </span><span foreground='#1b1f26' size='13pt' rise='2pt'></span><span size='10pt' rise='3pt'>$(df -h | grep "/$" | awk '{print $5}')</span>  </span><span background='#39C6B0' foreground='#1b1f26' size='x-large'></span>"
 markup=pango
-background=#81A1C1
+background=#39C6B0
 color=#1b1f26
 interval=30
 separator_block_width=0
 
-
 [corner-2]
 command=echo "<span size='14pt' ></span>"
-color=#92c0fc
+color=#39C6B0
 interval=2
 separator_block_width=0
-
-
-
-
-
