@@ -209,3 +209,7 @@ case ":$PATH:" in
   *) export PATH="$PNPM_HOME/bin:$PATH" ;;
 esac
 # pnpm end
+unset EZA_COLORS
+unset LS_COLORS
+unset EZA_COLORS
+unset LS_COLORS
