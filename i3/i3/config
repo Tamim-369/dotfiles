@@ -254,7 +254,7 @@ client.urgent           #BF616A #BF616A #ECEFF4 #BF616A #BF616A
 
 
 exec_always --no-startup-id "bash -c ./enable_tap_to_click.sh"
-exec_always --no-startup-id "feh --bg-scale ~/Wallpapers/main.jpg"
+exec_always --no-startup-id "feh --bg-scale ~/Wallpapers/inspiration.png"
 
 exec_always --no-startup-id xss-lock -- i3lock -n
 exec_always --no-startup-id "redshift -P -O 3900"
