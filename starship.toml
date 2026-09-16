@@ -26,7 +26,7 @@ $character\
 # DIRECTORY
 # ─────────────────────────────
 [directory]
-style = "fg:text_light bg:core_blue"
+style = "fg:core_dark bg:core_blue"
 format = "[ $path ]($style)"
 truncation_length = 3
 truncation_symbol = "…/"
@@ -43,11 +43,11 @@ truncation_symbol = "…/"
 [git_branch]
 symbol = ""
 style = "bg:core_mid"
-format = "[ $symbol $branch ](fg:core_blue bg:core_mid)"
+format = "[ $symbol $branch ](fg:text_light bg:core_mid)"
 
 [git_status]
 style = "bg:core_mid"
-format = "[($all_status$ahead_behind )](fg:core_blue bg:core_mid)"
+format = "[($all_status$ahead_behind )](fg:text_light bg:core_mid)"
 
 # ─────────────────────────────
 # LANGUAGES (all unified)
@@ -96,12 +96,12 @@ error_symbol = "[❯](fg:core_mid)"
 # ─────────────────────────────
 [palettes.custom]
 
-core_bg     = "#16383A"
-core_blue   = "#39C6B0"
-core_mid    = "#245052"
-core_dark   = "#172B2D"
-core_darker = "#102124"
+core_bg     = "#3A321B"
+core_blue   = "#EECA57"
+core_mid    = "#B89B35"
+core_dark   = "#211C0F"
+core_darker = "#151209"
 
-text_dark   = "#39C6B0"
-text_light  = "#D4E3E2"
-text_soft   = "#9BB5B3"
+text_dark   = "#EECA57"
+text_light  = "#FFF4C7"
+text_soft   = "#D8BE68"

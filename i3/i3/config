@@ -223,10 +223,10 @@ font pango:JetBrainsMono Nerd Font 10
 colors {
     background        #16191D
     statusline        #D8DEE9
-    separator         #279d8b
+    separator         #EECA57
 
-    focused_workspace  #267F76 #1B1F26 #ECEFF4
-    active_workspace   #279d8b #1B1F26 #ECEFF4
+    focused_workspace  #EECA57 #1B1F26 #ECEFF4
+    active_workspace   #EECA57 #1B1F26 #ECEFF4
     inactive_workspace #1B1F26 #1B1F26 #59677E
     urgent_workspace   #BF616A #BF616A #ECEFF4
     binding_mode       #D08770 #1B1F26 #ECEFF4
@@ -242,9 +242,9 @@ gaps outer 2
 
 client.background        #1B1F26
 
-client.focused          #279d8b #1B1F26 #ECEFF4 #279d8b #279d8b
-client.focused_inactive #267F76 #1B1F26 #8FA8A5 #267F76 #267F76
-client.unfocused        #1B1F26 #1B1F26 #59677E #267F76 #1B1F26
+client.focused          #EECA57 #1B1F26 #ECEFF4 #EECA57 #EECA57
+client.focused_inactive #EECA57 #1B1F26 #8FA8A5 #EECA57 #EECA57
+client.unfocused        #1B1F26 #1B1F26 #59677E #EECA57 #1B1F26
 client.urgent           #BF616A #BF616A #ECEFF4 #BF616A #BF616A
 
 
@@ -254,7 +254,7 @@ client.urgent           #BF616A #BF616A #ECEFF4 #BF616A #BF616A
 
 
 exec_always --no-startup-id "bash -c ./enable_tap_to_click.sh"
-exec_always --no-startup-id "feh --bg-scale ~/Wallpapers/inspiration.png"
+exec_always --no-startup-id "feh --bg-scale ~/Wallpapers/TAMIM.jpg"
 
 exec_always --no-startup-id xss-lock -- i3lock -n
 exec_always --no-startup-id "redshift -P -O 3900"
