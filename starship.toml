@@ -3,11 +3,11 @@
 palette = "custom"
 
 format = """
-[](core_bg)\
-[ ](bg:core_bg fg:text_dark)\
-[](bg:core_blue fg:core_bg)\
+[](core_dark)\
+[ ](bg:core_dark fg:text_light)\
+[](bg:core_red fg:core_dark)\
 $directory\
-[](fg:core_blue bg:core_mid)\
+[](fg:core_red bg:core_mid)\
 $git_branch\
 $git_status\
 [](fg:core_mid bg:core_dark)\
@@ -18,7 +18,7 @@ $golang\
 $php\
 [](fg:core_dark bg:core_darker)\
 $time\
-[ ](fg:core_darker)\
+[](fg:core_darker)\
 $character\
 """
 
@@ -26,7 +26,7 @@ $character\
 # DIRECTORY
 # ─────────────────────────────
 [directory]
-style = "fg:core_dark bg:core_blue"
+style = "fg:text_light bg:core_red"
 format = "[ $path ]($style)"
 truncation_length = 3
 truncation_symbol = "…/"
@@ -50,58 +50,63 @@ style = "bg:core_mid"
 format = "[($all_status$ahead_behind )](fg:text_light bg:core_mid)"
 
 # ─────────────────────────────
-# LANGUAGES (all unified)
+# LANGUAGES
 # ─────────────────────────────
 [nodejs]
 symbol = ""
 style = "bg:core_dark"
-format = "[ $symbol ($version) ](fg:core_blue bg:core_dark)"
+format = "[ $symbol ($version) ](fg:core_red bg:core_dark)"
 
 [bun]
 symbol = ""
 style = "bg:core_dark"
-format = "[ $symbol ($version) ](fg:core_blue bg:core_dark)"
+format = "[ $symbol ($version) ](fg:core_red bg:core_dark)"
 
 [rust]
 symbol = ""
 style = "bg:core_dark"
-format = "[ $symbol ($version) ](fg:core_blue bg:core_dark)"
+format = "[ $symbol ($version) ](fg:core_red bg:core_dark)"
 
 [golang]
 symbol = ""
 style = "bg:core_dark"
-format = "[ $symbol ($version) ](fg:core_blue bg:core_dark)"
+format = "[ $symbol ($version) ](fg:core_red bg:core_dark)"
 
 [php]
 symbol = ""
 style = "bg:core_dark"
-format = "[ $symbol ($version) ](fg:core_blue bg:core_dark)"
+format = "[ $symbol ($version) ](fg:core_red bg:core_dark)"
 
 # ─────────────────────────────
 # TIME
 # ─────────────────────────────
+[time]
+disabled = false
+format = "[  $time ](fg:text_soft bg:core_darker)"
+time_format = "%H:%M"
 
 # ─────────────────────────────
 # PROMPT
 # ─────────────────────────────
 [line_break]
 disabled = true
+
 [character]
 disabled = false
-success_symbol = "[❯](fg:core_blue)"
-error_symbol = "[❯](fg:core_mid)"
+success_symbol = "[❯](bold core_red)"
+error_symbol = "[❯](bold core_mid)"
 
 # ─────────────────────────────
-# PALETTE (THE ONLY PLACE COLORS LIVE)
+# PALETTE
 # ─────────────────────────────
 [palettes.custom]
+core_bg     = "#242424"
+core_red    = "#c60a0a"
+core_blue   = "#FF3030"
+core_mid    = "#555555"
+core_dark   = "#303030"
+core_darker = "#242424"
 
-core_bg     = "#3A321B"
-core_blue   = "#EECA57"
-core_mid    = "#B89B35"
-core_dark   = "#211C0F"
-core_darker = "#151209"
-
-text_dark   = "#EECA57"
-text_light  = "#FFF4C7"
-text_soft   = "#D8BE68"
+text_dark   = "#FFFFFF"
+text_light  = "#FFFFFF"
+text_soft   = "#D0D0D0"

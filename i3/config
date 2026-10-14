@@ -28,7 +28,9 @@ exec --no-startup-id dex --autostart --environment i3
 
 # xss-lock grabs a logind suspend inhibit lock and will use i3lock to lock the
 # screen before suspend. Use loginctl lock-session to lock your screen.
-exec --no-startup-id xss-lock --transfer-sleep-lock -- i3lock --nofork
+# DISABLED so idle never produces a lock/login screen (automation runs overnight).
+# exec --no-startup-id xss-lock --transfer-sleep-lock -- i3lock --nofork
+exec --no-startup-id xset s off
 
 # NetworkManager is the most popular way to manage wireless networks on Linux,
 # and nm-applet is a desktop environment-independent system tray GUI for it.
@@ -193,12 +195,6 @@ mode "resize" {
         bindsym $mod+r mode "default"
 }
 
-# Move to the workspace on the left
-bindsym Ctrl+Alt+Left workspace prev_on_output
-
-# Move to the workspace on the right
-bindsym Ctrl+Alt+Right workspace next_on_output
-
 #screen shot shortcut
 bindsym $mod+Shift+s exec --no-startup-id ~/.config/i3/screenshot.sh
 #brightness controll
@@ -223,10 +219,10 @@ font pango:JetBrainsMono Nerd Font 10
 colors {
     background        #16191D
     statusline        #D8DEE9
-    separator         #39C6B0
+    separator         #e40f1d
 
-    focused_workspace  #267F76 #1B1F26 #ECEFF4
-    active_workspace   #39C6B0 #1B1F26 #ECEFF4
+    focused_workspace  #e40f1d #1B1F26 #ECEFF4
+    active_workspace   #e40f1d #1B1F26 #ECEFF4
     inactive_workspace #1B1F26 #1B1F26 #59677E
     urgent_workspace   #BF616A #BF616A #ECEFF4
     binding_mode       #D08770 #1B1F26 #ECEFF4
@@ -242,9 +238,9 @@ gaps outer 2
 
 client.background        #1B1F26
 
-client.focused          #39C6B0 #1B1F26 #ECEFF4 #39C6B0 #39C6B0
-client.focused_inactive #267F76 #1B1F26 #8FA8A5 #267F76 #267F76
-client.unfocused        #1B1F26 #1B1F26 #59677E #267F76 #1B1F26
+client.focused          #e40f1d #1B1F26 #ECEFF4 #e40f1d #e40f1d
+client.focused_inactive #e40f1d #1B1F26 #8FA8A5 #e40f1d #e40f1d
+client.unfocused        #1B1F26 #1B1F26 #59677E #e40f1d #1B1F26
 client.urgent           #BF616A #BF616A #ECEFF4 #BF616A #BF616A
 
 
@@ -254,9 +250,10 @@ client.urgent           #BF616A #BF616A #ECEFF4 #BF616A #BF616A
 
 
 exec_always --no-startup-id "bash -c ./enable_tap_to_click.sh"
-exec_always --no-startup-id "feh --bg-scale ~/Pictures/walpaper.png"
+exec_always --no-startup-id "feh --bg-scale ~/Wallpapers/red.jpg"
 
-exec_always --no-startup-id xss-lock -- i3lock -n
+exec_always --no-startup-id "xset s off"
+exec_always --no-startup-id "xset -dpms"
 exec_always --no-startup-id "redshift -P -O 3900"
 
 exec_always --no-startup-id "xgamma -gamma 1.2"
@@ -272,3 +269,6 @@ exec_always --no-startup-id picom --backend glx
 
 
 for_window [class="Conky"] floating enable, border none
+# blocker: covers the feed column on feed URLs. Comment this out and reload i3
+# (Mod+Shift+c) to stop it. It ignores Ctrl+C, SIGTERM and SIGHUP, so this line is
+# the only way in or out.
