@@ -18,16 +18,16 @@ border-color: rgba(67, 76, 94, 100%);                /* #434C5E - subtle border 
 foreground: rgba(216, 222, 233, 100%);               /* #D8DEE9 - soft white */
 normal-foreground: @foreground;
 alternate-normal-foreground: @foreground;
-lightfg: rgb(93, 221, 183);                   /* rgb(93, 221, 183) - blue accent */
+lightfg: rgb(223, 50, 7);                   /* rgb(223, 50, 7); - blue accent */
 
 /* -------------------- Selected -------------------- */
-selected-normal-background: rgb(93, 221, 183);  /* rgb(93, 221, 183) */
+selected-normal-background: rgb(223, 50, 7);  /* rgb(223, 50, 7); */
 selected-normal-foreground: rgba(236, 239, 244, 100%); /* #ECEFF4 */
 
 /* -------------------- Active -------------------- */
 active-background: rgba(59, 66, 82, 17%);             /* subtle dark overlay */
-active-foreground: rgb(12, 169, 122);         /* rgb(12, 169, 122) - lighter blue */
-selected-active-background: rgb(12, 169, 122); /* rgb(12, 169, 122) */
+active-foreground: rgb(223, 50, 7);         /* rgb(223, 50, 7);- lighter blue */
+selected-active-background: rgb(223, 50, 7); /* rgb(223, 50, 7);*/
 selected-active-foreground: rgba(236, 239, 244, 100%); /* #ECEFF4 */
 alternate-active-background: rgba(28, 28, 28, 89%);   /* slightly lighter black */
 alternate-active-foreground: @active-foreground;
@@ -106,7 +106,7 @@ element.normal.active {
 element.selected.normal {
     border: 1px;
     border-color: @selected-normal-background;
-    text-color:       @selected-normal-background;
+    text-color:       @selected-active-foreground;
 }
 element.selected.urgent {
     background-color: @selected-urgent-background;
