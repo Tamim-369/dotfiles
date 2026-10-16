@@ -102,7 +102,7 @@ error_symbol = "[❯](bold core_mid)"
 [palettes.custom]
 core_bg     = "#242424"
 core_red    = "#c60a0a"
-core_blue   = "#FF3030"
+core_blue   = "#ff0404"
 core_mid    = "#555555"
 core_dark   = "#303030"
 core_darker = "#242424"
